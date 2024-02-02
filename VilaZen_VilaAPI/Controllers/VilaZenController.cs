@@ -108,8 +108,7 @@ namespace VilaZen_VilaAPI.Controllers
             }
 
             villa.Nome = villaDto.Nome;
-            villa.Population = villaDto.Population;
-            villa.Sqft = villaDto.Sqft;
+            villa.Ocupacao = villaDto.Ocupacao;
 
             return NoContent();
 

@@ -8,10 +8,12 @@ namespace VilaZen_VilaAPI.Models.Dto
         [Required]
         [MaxLength(30)]
         public string Nome { get; set; }
-        public DateTime DataCriacao { get; set; }
-        public int Population { get; set; }
-        public int Sqft { get; set; }
-
+        public string Detalhes { get; set; }
+        [Required]
+        public string Avaliar { get; set; }
+        public int Ocupacao { get; set; }
+        public string ImageUrl { get; set; }
+        public string Cortesia { get; set; }
 
     }
 }

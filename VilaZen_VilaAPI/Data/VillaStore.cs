@@ -6,7 +6,7 @@ namespace VilaZen_VilaAPI.Data
     {
         public static List<VillaDto> villaList = new List<VillaDto> 
         {
-            new VillaDto{Id = 1, Nome = "Vila Rica", Population = 300, Sqft = 10 }
+            new VillaDto{Id = 1, Nome = "Vila Rica", Ocupacao = 300 }
         };
     }
 }

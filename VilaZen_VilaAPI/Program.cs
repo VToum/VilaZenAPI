@@ -1,8 +1,13 @@
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using VilaZen_VilaAPI.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<ApplicationDataContext>(option => {
+    option.UseSqlServer(builder.Configuration.GetConnectionString("DafaultSQLConnection"));
+});
 
 builder.Services.AddControllers(option =>
 {
