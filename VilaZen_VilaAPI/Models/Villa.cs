@@ -10,10 +10,12 @@ namespace VilaZen_VilaAPI.Models
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Detalhes { get; set; }
-        public string Avaliar { get; set; }
+        public double Avaliar { get; set; }
         public int Ocupacao { get; set; }
         public string ImageUrl { get; set; }
         public string Cortesia { get; set; }
+        public int Sqft { get; set; }
+
         public DateTime DataCriacao { get; set; }
         public DateTime DataAtualizacao { get; set; }
 
