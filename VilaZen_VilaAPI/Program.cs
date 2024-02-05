@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using VilaZen_VilaAPI;
 using VilaZen_VilaAPI.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,7 @@ builder.Services.AddDbContext<ApplicationDataContext>(option => {
     option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultSQLConnection"));
 });
 
+builder.Services.AddAutoMapper(typeof(MapperConfig));
 builder.Services.AddControllers(option =>
 {
     /*option.ReturnHttpNotAcceptable=true*/
