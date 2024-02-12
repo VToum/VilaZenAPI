@@ -2,6 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using VilaZen_VilaAPI;
 using VilaZen_VilaAPI.Data;
+using VilaZen_VilaAPI.Repositorio;
+using VilaZen_VilaAPI.Repositorio.IRepositorio;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +11,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ApplicationDataContext>(option => {
     option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultSQLConnection"));
 });
+
+builder.Services.AddScoped<IVillaRepositorio, VillaRepositorio>();
+builder.Services.AddScoped<IVillaNumberRepositorio, VillaNumberRepositorio>();
 
 builder.Services.AddAutoMapper(typeof(MapperConfig));
 builder.Services.AddControllers(option =>
