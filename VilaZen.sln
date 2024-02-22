@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VilaZen_VilaAPI", "VilaZen_VilaAPI\VilaZen_VilaAPI.csproj", "{075D7F20-2584-4010-8307-D83D459DCFCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VilaZen_VilaAPI", "VilaZen_VilaAPI\VilaZen_VilaAPI.csproj", "{075D7F20-2584-4010-8307-D83D459DCFCE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VilaZen_Web", "VilaZen_Web\VilaZen_Web.csproj", "{F4E1FE7A-9ACD-4471-AF68-CD8E6E82D6A5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VilaZen_Utility", "VilaZen_Utility\VilaZen_Utility.csproj", "{EDBD0481-47EC-401E-8985-AF3747CF0D47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{075D7F20-2584-4010-8307-D83D459DCFCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{075D7F20-2584-4010-8307-D83D459DCFCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{075D7F20-2584-4010-8307-D83D459DCFCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4E1FE7A-9ACD-4471-AF68-CD8E6E82D6A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4E1FE7A-9ACD-4471-AF68-CD8E6E82D6A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4E1FE7A-9ACD-4471-AF68-CD8E6E82D6A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4E1FE7A-9ACD-4471-AF68-CD8E6E82D6A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDBD0481-47EC-401E-8985-AF3747CF0D47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDBD0481-47EC-401E-8985-AF3747CF0D47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDBD0481-47EC-401E-8985-AF3747CF0D47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDBD0481-47EC-401E-8985-AF3747CF0D47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

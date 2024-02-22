@@ -1,0 +1,80 @@
+﻿@model VilaZen_Web.Models.Dto.VillaDto;
+
+
+<form asp-action="RemoverVilla">
+    <br />
+    <div class="container border p-">
+        <h1 class="text-primary">Remover Villa</h1>
+        <hr />
+
+        <input hidden asp-for="Id" />
+        <div class="row">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="col-2">
+                <label asp-for="Nome" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pt-3">
+                <input asp-for="Nome" disabled class="form-control">
+            </div>
+
+            <div class="col-2">
+                <label asp-for="Preco" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pt-3">
+                <input asp-for="Preco" disabled class="form-control" />
+            </div>
+
+            <div class="col-2">
+                <label asp-for="Ocupacao" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pt-3">
+                <input asp-for="Ocupacao" disabled class="form-control" />
+            </div>
+
+            <div class="col-2">
+                <label asp-for="Sqft"  class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pt-3">
+                <input asp-for="Sqft" disabled class="form-control" />
+            </div>
+
+            <div class="col-2">
+                <label asp-for="ImageUrl"  class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pt-3">
+                <input asp-for="ImageUrl" disabled class="form-control" />
+            </div>
+
+            <div class="col-2">
+                <label asp-for="Cortesia" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pt-3">
+                <input asp-for="Cortesia" disabled class="form-control" />
+            </div>
+
+            <div class="col-2">
+                <label asp-for="Detalhes" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10  pt-3" style="margin-bottom: 20px;">
+                <textarea asp-for="Detalhes" disabled class="form-control" rows="5"></textarea>
+            </div>
+
+
+
+            <div class="col-5 offset-2">
+                <a asp-action="IndexVilla" asp-controller="Villa" class="btn btn-primary btn form-control">Voltar</a>
+            </div>
+
+            <div class="col-5" style="margin-bottom: 20px;">
+                <input type="submit" value="Remover" class="btn btn-danger form-control" />
+            </div>
+
+
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,36 @@
+﻿@model IEnumerable<VilaZen_Web.Models.Dto.VillaDto>
+<br/>
+
+<div class="container p-4 border">
+    <h1 class="text-primary">Lista de Vilas</h1>
+
+    <div class="d-flex justify-content-end">
+        <a asp-controller="Villa" asp-action="CriarVilla" class="btn btn-outline-primary"><i class="bi bi-house-add"></i>  Criar Uma Nova Vila</a>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Ocupação</th>
+                <th>Preço</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var villa in Model)
+            {
+                <tr>
+                    <td>@villa.Nome</td>
+                    <td>@villa.Ocupacao</td>
+                    <td>@((villa.Preco).ToString("c"))</td>
+                    <td>
+                        <a asp-controller="Villa" asp-action="AtualizarVilla" asp-route-villaId="@villa.Id" class="btn btn-success"><i class="bi bi-pen"></i></a>
+                        <a asp-controller="Villa" asp-action="RemoverVilla" asp-route-villaId="@villa.Id" class="btn btn-danger"><i class="bi bi-trash3"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

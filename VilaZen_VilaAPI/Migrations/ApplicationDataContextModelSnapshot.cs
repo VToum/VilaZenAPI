@@ -30,11 +30,7 @@ namespace VilaZenVilaAPI.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<double>("Avaliar")
-                        .HasColumnType("float");
-
                     b.Property<string>("Cortesia")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("DataAtualizacao")
@@ -44,11 +40,9 @@ namespace VilaZenVilaAPI.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Detalhes")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImageUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nome")
@@ -57,6 +51,9 @@ namespace VilaZenVilaAPI.Migrations
 
                     b.Property<int>("Ocupacao")
                         .HasColumnType("int");
+
+                    b.Property<double>("Preco")
+                        .HasColumnType("float");
 
                     b.Property<int>("Sqft")
                         .HasColumnType("int");
@@ -78,7 +75,6 @@ namespace VilaZenVilaAPI.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("DetalhesEspeciais")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("VillaId")

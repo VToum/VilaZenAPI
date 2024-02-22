@@ -12,7 +12,7 @@ namespace VilaZen_VilaAPI.Models.Dto
         [Required]
         public string Detalhes { get; set; }
         [Required]
-        public double Avaliar { get; set; }
+        public double Preco { get; set; }
         [Required]
         public int Ocupacao { get; set; }
         [Required]
