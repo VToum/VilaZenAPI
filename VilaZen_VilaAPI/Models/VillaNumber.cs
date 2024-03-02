@@ -9,7 +9,7 @@ namespace VilaZen_VilaAPI.Models
         public int VillaNo { get; set; }
 
         [ForeignKey("Villa")]
-        public int VillaId { get; set; }
+        public int VillaID { get; set; }
         public Villa Villa { get; set; }
         public string DetalhesEspeciais { get; set; }
         public DateTime DataCriacao { get; set; }

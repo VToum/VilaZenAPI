@@ -4,24 +4,24 @@ using VilaZen_Web.Models.Dto;
 
 namespace VilaZen_Web.Services
 {
-    public class VillaService : BaseService, IVillaService
+    public class VillaNumberService : BaseService, IVillaNumberService
     {
         private readonly IHttpClientFactory _httpClientFactory;
         private string VillaUrl;
-        public VillaService(IHttpClientFactory httpClientFactory, IConfiguration configuration) : base(httpClientFactory)
+        public VillaNumberService(IHttpClientFactory httpClientFactory, IConfiguration configuration) : base(httpClientFactory)
         {
             _httpClientFactory = httpClientFactory;
             VillaUrl = configuration.GetValue<string>("ServiceUrls:VilaZenAPI");
 
         }
 
-        public Task<T> AtualizarAsync<T>(VillaUpdateDto dto)
+        public Task<T> AtualizarAsync<T>(VillaNumberUpdateDto dto)
         {
             return SendAsync<T>(new APIRequest()
             {
                 ApiType = SD.ApiType.Put,
                 Data = dto,
-                Url = VillaUrl + "/api/VilaZenAPI/" + dto.Id
+                Url = VillaUrl + "/api/VilaZenAPI/" + dto.VillaNo
 
             });
         }
@@ -46,7 +46,7 @@ namespace VilaZen_Web.Services
 
         }
 
-        public Task<T> CriarAsync<T>(VillaCreateDto dto)
+        public Task<T> CriarAsync<T>(VillaNumberCreateDto dto)
         {
             return SendAsync<T>(new APIRequest()
             {

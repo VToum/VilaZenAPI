@@ -39,7 +39,7 @@ namespace VilaZen_VilaAPI.Controllers
             try
             {
 
-                IEnumerable<VillaNumber> villasNumbersList = await _dbVilaNumber.BuscaTodosAsync();
+                IEnumerable<VillaNumber> villasNumbersList = await _dbVilaNumber.BuscaTodosAsync(includeProperties:"Villa");
                 _response.Result = _mapper.Map<List<VillaNumberDto>>(villasNumbersList);
                 _response.StatusCode = HttpStatusCode.OK;
 

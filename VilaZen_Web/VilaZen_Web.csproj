@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\VilaZen_Utility\VilaZen_Utility.csproj" />
+    <ProjectReference Include="..\VilaZen_VilaAPI\VilaZen_VilaAPI.csproj" />
   </ItemGroup>
 
 </Project>

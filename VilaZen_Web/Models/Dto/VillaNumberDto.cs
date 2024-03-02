@@ -6,7 +6,10 @@ namespace VilaZen_Web.Models.Dto
     {
         [Required]
         public int VillaNo { get; set; }
+        [Required]
+        public int VillaID { get; set; }
         public string DetalhesEspeciais { get; set; }
+        public VillaDto Villa { get; set; }
 
     }
 }
